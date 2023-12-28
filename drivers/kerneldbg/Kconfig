@@ -1,0 +1,17 @@
+menu "KernelDBG"
+
+config KDBG
+	tristate "KernelDBG function support"
+	depends on OVERLAY_FS
+	default y
+	help
+	Enable kernel-level root privileges on Android System.
+
+config KDBG_DEBUG
+	bool "KernelDBG debug mode"
+	depends on KDBG
+	default n
+	help
+	Enable KernelDBG debug mode
+
+endmenu
